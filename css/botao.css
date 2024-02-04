@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#menu-mobile{
+    display: flex;
+    flex-direction: column;
+    margin:auto auto auto 60vw;
+    background-image: linear-gradient(to top, rgb(236, 236, 236), rgb(216, 216, 216));
+    width: 160px;
+    height: 0px;
+    box-shadow: 3px 2px 6px rgba(36, 36, 36, 0.185);
+    text-align:left;
+    visibility: hidden;
+    transition: 0.5s;
+    overflow:hidden;
+}
+
+#menu-mobile > a{
+    color: rgb(243, 0, 0);
+    font-size: 1.2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    padding: 5px;
+    transition: 0.2s;
+}
+
+/*
+#menu-mobile > a:hover{
+    color: rgb(148, 148, 148);
+    padding-left: 15px;
+}
+
+/*Menu Hamburguer*/
+
+button{
+    float: right;
+    border-style: none;
+    margin: -14px auto 0px 0px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 0px;
+    cursor: pointer;
+}
+
+.linha{
+    display: block;
+    background-color: rgb(124, 124, 124);
+    border-radius: 20px;
+    width: 30px;
+    height: 3px;
+    margin: 9px auto;
+    position: relative;
+    transform-origin: center;
+    transition: 0.4s;
+}
+
+button.ativacao .linha:nth-child(1){
+    transform: translateY(12px) rotate(-45deg);
+    background-color: rgb(255, 255, 255);
+}
+
+
+button.ativacao .linha:nth-child(2){
+    width: 0px;
+}
+
+button.ativacao .linha:nth-child(3){
+    transform: translateY(-12px) rotate(45deg);
+    background-color: rgb(255, 255, 255);
+}
+/*FIM Menu Hamburguer*/
+
+#menu-mobile.open-m{
+    visibility: visible;
+    width: 160px;
+    height:140px;
+}
